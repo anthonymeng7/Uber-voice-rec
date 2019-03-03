@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.core.sym.BytesToNameCanonicalizer;
 import com.uber.sdk.android.core.UberSdk;
+import com.uber.sdk.android.rides.RideRequestButton;
+import com.uber.sdk.rides.client.ServerTokenSession;
 import com.uber.sdk.rides.client.SessionConfiguration;
 
 import org.w3c.dom.Text;
@@ -24,6 +27,7 @@ public class rider extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rider);
+
         SessionConfiguration config = new SessionConfiguration.Builder()
                 // mandatory
                 .setClientId("XwHDjIS7HjdxqYqxnEiouw7LHgIuVFMG")
@@ -36,6 +40,11 @@ public class rider extends AppCompatActivity {
                 .build();
         UberSdk.initialize(config);
         addListenerOnButton();
+
+        RideRequestButton requestButton = new RideRequestButton(getApplicationContext());
+        RelativeLayout layout = (RelativeLayout) getLayoutInflater().inflate(R.layout.activity_rider,null);
+        layout.addView(requestButton);
+
     }
     public void addListenerOnButton(){
         password = (EditText) findViewById(R.id.editText);
@@ -45,8 +54,6 @@ public class rider extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView txt = (TextView) findViewById(R.id.textView2);
-                txt.setText(getPassword());
                 switchPass();
             }
         });

@@ -10,8 +10,24 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="8dp"
+        android:text="Please enter the password"
         android:textColor="@color/uber_white"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="155dp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/uber_white"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="160dp" />
 </android.support.constraint.ConstraintLayout>
