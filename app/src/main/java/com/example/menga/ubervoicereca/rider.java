@@ -1,5 +1,6 @@
 package com.example.menga.ubervoicereca;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,10 +47,16 @@ public class rider extends AppCompatActivity {
             public void onClick(View v) {
                 TextView txt = (TextView) findViewById(R.id.textView2);
                 txt.setText(getPassword());
+                switchPass();
             }
         });
     }
     public String getPassword(){
         return password.getText().toString();
+    }
+    public void switchPass(){
+        Intent intent = new Intent(this, pass.class);
+        intent.putExtra("password", getPassword());
+        startActivity(intent);
     }
 }
