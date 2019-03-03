@@ -6,4 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".rider">
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="87dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginStart="-85dp"
+        android:layout_marginBottom="127dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/addressInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint"
+            android:textColor="@android:color/white" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="Rider"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="153dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        tools:text="Password" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="182dp"
+        android:text="Address"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-22dp"
+        android:layout_marginBottom="23dp"
+        android:layout_toEndOf="@+id/editText"
+        android:text="enter" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:textColor="@android:color/white" />
+
 </RelativeLayout>
