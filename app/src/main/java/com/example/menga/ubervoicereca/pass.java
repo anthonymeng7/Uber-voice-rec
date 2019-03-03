@@ -30,6 +30,9 @@ public class pass extends AppCompatActivity {
     }
     public void returnHome(){
         Intent intent = new Intent(this, MainActivity.class);
+        Bundle bundle = getIntent().getExtras();
+        String password = bundle.getString("password");
+        intent.putExtra("password",password);
         startActivity(intent);
     }
 }

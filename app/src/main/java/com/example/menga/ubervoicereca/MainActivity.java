@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void driverActivity(){
         Intent intent = new Intent(this,driver.class);
+        Bundle bundle = getIntent().getExtras();
+        String password = bundle.getString("password");
+        System.out.println(password);
+        intent.putExtra("password",password);
         startActivity(intent);
     }
 }
