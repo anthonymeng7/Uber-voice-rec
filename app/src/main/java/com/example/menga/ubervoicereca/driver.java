@@ -18,7 +18,6 @@ private String input;
         Bundle bundle = getIntent().getExtras();
         password = bundle.getString("password");
         System.out.println(password);
-        password.trim();
 
 
         EditText txtIn = findViewById(R.id.editText2);
